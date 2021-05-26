@@ -19,6 +19,8 @@ public class MenuManager : MonoBehaviourPunCallbacks
     public GameObject player;
     public Transform[] spawnPosition;
 
+    string roomName= "";
+
     int spawnPositionUsed;
 
     void Start()
@@ -63,7 +65,7 @@ public class MenuManager : MonoBehaviourPunCallbacks
         roomOptions.IsVisible = true;
         roomOptions.MaxPlayers = 2;
 
-        string roomName = "Sala: " + Random.Range(1, 10);
+        roomName = "Sala: " + Random.Range(1, 10);
         LobbyName.text = roomName;
         LobbyName.gameObject.SetActive(true);
 
@@ -73,13 +75,18 @@ public class MenuManager : MonoBehaviourPunCallbacks
     public override void OnJoinedRoom()
     {
         PanelControler(canvasWaiting.name);
+        LobbyName.text = roomName;
+        LobbyName.gameObject.SetActive(true);
+        Debug.LogWarning("FOI PORRA");
 
         if (PhotonNetwork.CurrentRoom.PlayerCount == 1)
         {
+            Debug.LogWarning("SPAWN PLAYER 1");
             spawnPositionUsed = 0;
         }
         else
         {
+            Debug.LogWarning("SPAWN PLAYER 2");
             spawnPositionUsed = 1;
         }
     }
