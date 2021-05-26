@@ -78,6 +78,7 @@ public class MenuManager : MonoBehaviourPunCallbacks
         PanelControler(canvasWaiting.name);
         Debug.LogWarning("FOI PORRA");
 
+        //SE TIVER 1 PLAYER, ENTÃO O OUTRO VAI SPAWNAR EM OUTRO LUGAR//
         if (PhotonNetwork.CurrentRoom.PlayerCount == 1)
         {
             Debug.LogWarning("SPAWN PLAYER 1");
