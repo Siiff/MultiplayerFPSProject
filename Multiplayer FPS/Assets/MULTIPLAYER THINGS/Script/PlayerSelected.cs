@@ -31,8 +31,4 @@ public class PlayerSelected : MonoBehaviour
     {
         LoadPlayerScene(1);
     }
-    public void Btn3()
-    {
-        LoadPlayerScene(2);
-    }
 }
