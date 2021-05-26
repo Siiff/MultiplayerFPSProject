@@ -71,6 +71,10 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("ChooseLevel");
     }
+    public void LoadChooseLevelMULTIPLAYER()
+    {
+        SceneManager.LoadScene("ChooseLevelMULTIPLAYER");
+    }
     public void LoadFirstLevel()
     {
         SceneManager.LoadScene("lvl 1");
