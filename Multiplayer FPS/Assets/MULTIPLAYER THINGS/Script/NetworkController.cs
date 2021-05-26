@@ -22,6 +22,8 @@ public class NetworkController : MonoBehaviourPunCallbacks
     [Space]
     [Header("Start")]
     public GameObject startPN;
+    public GameObject Player1;
+    public GameObject Player2;
 
 
     [Space]
@@ -128,17 +130,27 @@ public class NetworkController : MonoBehaviourPunCallbacks
         Debug.LogWarning("Nome da Sala: " + PhotonNetwork.CurrentRoom.Name);
         Debug.LogWarning("Nome da Player: " + PhotonNetwork.NickName);
         Debug.LogWarning("Players Conectados: " + PhotonNetwork.CurrentRoom.PlayerCount);
+        lobbyNumber.text = roomNameInput.text;
 
         loginPn.gameObject.SetActive(false);
         lobbyPn.gameObject.SetActive(false);
-        mainCamera.gameObject.SetActive(false);
         startPN.gameObject.SetActive(true);
+        Player1.gameObject.SetActive(true);
+        Player2.gameObject.SetActive(true);
+        
 
         Vector3 pos = new Vector3(Random.Range(-15, 15), playerPUN.transform.position.y, Random.Range(-15, 15));
 
         PhotonNetwork.Instantiate(playerPUN.name, pos, playerPUN.transform.rotation, 0);
     }
 
+    public void LeftRoom()
+    {
+        Debug.Log("DESCONECTADO");
+        PhotonNetwork.LeaveRoom();
+        PhotonNetwork.LeaveLobby();
+        PhotonNetwork.Disconnect();
+    }
     public void OnPlayerEnteredRoom(PlayerController p1)
     {
         ExibeMsg(p1.playerName + msgEntrada);

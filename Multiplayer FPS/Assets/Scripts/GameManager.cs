@@ -79,6 +79,10 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("Lobby");
     }
+    public void LoadFistLevelMULTIPLAYER()
+    {
+        SceneManager.LoadScene("lvl 1 MULTIPLAYER");
+    }
     public void ChooseCharacters()
     {
         SceneManager.LoadScene("ChooseCharacter");
