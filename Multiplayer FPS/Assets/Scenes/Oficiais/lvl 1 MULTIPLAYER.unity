@@ -3691,6 +3691,7 @@ GameObject:
   - component: {fileID: 1698550737}
   - component: {fileID: 1698550739}
   - component: {fileID: 1698550740}
+  - component: {fileID: 1698550738}
   m_Layer: 0
   m_Name: NetWork
   m_TagString: Untagged
@@ -3712,6 +3713,32 @@ Transform:
   m_Father: {fileID: 812952268}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1698550738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1698550736}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a5f95daa383ced4e956a7a888432420, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loginPn: {fileID: 0}
+  playerNameInput: {fileID: 0}
+  lobbyPn: {fileID: 0}
+  roomNameInput: {fileID: 0}
+  lobbyNumber: {fileID: 0}
+  startPN: {fileID: 0}
+  Player1: {fileID: 0}
+  Player2: {fileID: 0}
+  playerPUN: {fileID: 0}
+  mainCamera: {fileID: 0}
+  LobbyPreFab: {fileID: 0}
+  msgText: {fileID: 0}
+  msgEntrada: ' Entrou na Sala!'
+  msgSaida: ' Saiu da Sala!'
 --- !u!114 &1698550739
 MonoBehaviour:
   m_ObjectHideFlags: 0

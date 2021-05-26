@@ -142,7 +142,7 @@ public class NetworkController : MonoBehaviourPunCallbacks
         Player1.gameObject.SetActive(true);
         Player2.gameObject.SetActive(true);
         
-
+        //SPAWN,, MODIFICAR//
         /*Vector3 pos = new Vector3(Random.Range(-1f, -5f), playerPUN.transform.position.y, Random.Range(5, 8));
 
         PhotonNetwork.Instantiate(playerPUN.name, pos, playerPUN.transform.rotation, 0);*/
