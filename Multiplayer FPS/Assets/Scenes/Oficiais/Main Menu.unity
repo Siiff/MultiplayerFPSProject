@@ -435,7 +435,7 @@ MonoBehaviour:
   mainPanel: {fileID: 2140409122}
   pausePanel: {fileID: 1942164244}
   endPanel: {fileID: 1104910725}
-  retryPanel: {fileID: 0}
+  retryPanel: {fileID: 4071983508423043631}
 --- !u!224 &175787702 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4071983507826761363, guid: 33fc71fe767eded4d9617988fa2e18d7,
@@ -2467,6 +2467,12 @@ PrefabInstance:
 --- !u!224 &4071983508423043630 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4071983507953510618, guid: 33fc71fe767eded4d9617988fa2e18d7,
+    type: 3}
+  m_PrefabInstance: {fileID: 4071983508423043629}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4071983508423043631 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6591834938573518940, guid: 33fc71fe767eded4d9617988fa2e18d7,
     type: 3}
   m_PrefabInstance: {fileID: 4071983508423043629}
   m_PrefabAsset: {fileID: 0}
