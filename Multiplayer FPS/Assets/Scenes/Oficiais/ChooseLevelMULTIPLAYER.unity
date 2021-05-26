@@ -4287,7 +4287,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 121411130}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: LobbyMultiplayer
+        m_MethodName: LoadFistLevelMULTIPLAYER
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

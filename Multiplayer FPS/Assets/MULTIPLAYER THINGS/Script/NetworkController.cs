@@ -30,6 +30,7 @@ public class NetworkController : MonoBehaviourPunCallbacks
     [Header("PLAYER")]
     public GameObject playerPUN;
     public GameObject mainCamera;
+    public GameObject LobbyPreFab;
 
     [Space]
     [Header("Menssagem na Tela")]
@@ -137,14 +138,18 @@ public class NetworkController : MonoBehaviourPunCallbacks
         lobbyPn.gameObject.SetActive(false);
         startPN.gameObject.SetActive(true);
         lobbyNumber.gameObject.SetActive(true);
-        
+        LobbyPreFab.gameObject.SetActive(false);
         Player1.gameObject.SetActive(true);
         Player2.gameObject.SetActive(true);
         
 
-        Vector3 pos = new Vector3(Random.Range(-1f, -5f), playerPUN.transform.position.y, Random.Range(5, 8));
+        /*Vector3 pos = new Vector3(Random.Range(-1f, -5f), playerPUN.transform.position.y, Random.Range(5, 8));
 
-        PhotonNetwork.Instantiate(playerPUN.name, pos, playerPUN.transform.rotation, 0);
+        PhotonNetwork.Instantiate(playerPUN.name, pos, playerPUN.transform.rotation, 0);*/
+    }
+
+    public void StartMatch() { 
+
     }
 
     public void LeftRoom()
