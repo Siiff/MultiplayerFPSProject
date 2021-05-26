@@ -130,16 +130,19 @@ public class NetworkController : MonoBehaviourPunCallbacks
         Debug.LogWarning("Nome da Sala: " + PhotonNetwork.CurrentRoom.Name);
         Debug.LogWarning("Nome da Player: " + PhotonNetwork.NickName);
         Debug.LogWarning("Players Conectados: " + PhotonNetwork.CurrentRoom.PlayerCount);
+
         lobbyNumber.text = roomNameInput.text;
 
         loginPn.gameObject.SetActive(false);
         lobbyPn.gameObject.SetActive(false);
         startPN.gameObject.SetActive(true);
+        lobbyNumber.gameObject.SetActive(true);
+        
         Player1.gameObject.SetActive(true);
         Player2.gameObject.SetActive(true);
         
 
-        Vector3 pos = new Vector3(Random.Range(-15, 15), playerPUN.transform.position.y, Random.Range(-15, 15));
+        Vector3 pos = new Vector3(Random.Range(-1f, -5f), playerPUN.transform.position.y, Random.Range(5, 8));
 
         PhotonNetwork.Instantiate(playerPUN.name, pos, playerPUN.transform.rotation, 0);
     }
@@ -153,11 +156,13 @@ public class NetworkController : MonoBehaviourPunCallbacks
     }
     public void OnPlayerEnteredRoom(PlayerController p1)
     {
+        Debug.LogWarning("ENTROU NA SALA");
         ExibeMsg(p1.playerName + msgEntrada);
     }
 
     public void OnPlayerLeftRoom(PlayerController p1)
     {
+        Debug.LogWarning("SAIU DA SALA");
         ExibeMsg(p1.playerName + msgSaida);
     }
 }

@@ -9,9 +9,10 @@ public class SelectPlayer : MonoBehaviour
 {
     public int playerSelected = 0;
     public GameObject playerList;
-    public Image playerIconCanvas;
 
+    public Image playerIconCanvas;
     public GameObject myplayerCanvas;
+
     PhotonView photonView;
 
     private void Start()

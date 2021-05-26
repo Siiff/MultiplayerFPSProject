@@ -73,7 +73,7 @@ public class MenuManager : MonoBehaviourPunCallbacks
         }
     }
 
-    public /*override*/ void OnPlayerEnteredRoom(Player newPlayer)
+    public void OnPlayerEnteredRoom(Player newPlayer)
     {
 
         Hashtable props = new Hashtable

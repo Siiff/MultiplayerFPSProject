@@ -5,18 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class PlayerSelected : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void LoadPlayerScene(int value)
     {
         PlayerPrefs.SetInt("HERO", value);
