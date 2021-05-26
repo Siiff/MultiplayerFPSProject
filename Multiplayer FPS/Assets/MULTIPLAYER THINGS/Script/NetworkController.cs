@@ -16,7 +16,13 @@ public class NetworkController : MonoBehaviourPunCallbacks
     [Header("LOBBY")]
     public GameObject lobbyPn;
     public InputField roomNameInput;
+    public Text lobbyNumber;
     string tempRoomName;
+
+    [Space]
+    [Header("Start")]
+    public GameObject startPN;
+
 
     [Space]
     [Header("PLAYER")]
@@ -38,12 +44,13 @@ public class NetworkController : MonoBehaviourPunCallbacks
         Debug.Log("Arma " + PlayerPrefs.GetInt("Arma"));
         loginPn.gameObject.SetActive(true);
         lobbyPn.gameObject.SetActive(false);
+        startPN.gameObject.SetActive(false);
         msgText.gameObject.SetActive(false);
 
-        tempPlayerName = "Neiva" + Random.Range(8, 99);
+        tempPlayerName = "Zooombie" + Random.Range(8, 99);
         playerNameInput.text = tempPlayerName;
 
-        tempRoomName = "Pato" + Random.Range(8, 99);
+        tempRoomName = "Roombie" + Random.Range(8, 99);
     }
 
     //######## Minhas Funções ##################
@@ -72,7 +79,7 @@ public class NetworkController : MonoBehaviourPunCallbacks
 
     public void CreateRoom()
     {
-        RoomOptions roomOptions = new RoomOptions() { MaxPlayers = 4 };
+        RoomOptions roomOptions = new RoomOptions() { MaxPlayers = 2 };
         PhotonNetwork.JoinOrCreateRoom(roomNameInput.text, roomOptions, TypedLobby.Default);
     }
 
@@ -125,19 +132,20 @@ public class NetworkController : MonoBehaviourPunCallbacks
         loginPn.gameObject.SetActive(false);
         lobbyPn.gameObject.SetActive(false);
         mainCamera.gameObject.SetActive(false);
+        startPN.gameObject.SetActive(true);
 
         Vector3 pos = new Vector3(Random.Range(-15, 15), playerPUN.transform.position.y, Random.Range(-15, 15));
 
         PhotonNetwork.Instantiate(playerPUN.name, pos, playerPUN.transform.rotation, 0);
     }
 
-    /*public override void OnPlayerEnteredRoom(Player p1)
+    public void OnPlayerEnteredRoom(PlayerController p1)
     {
-        ExibeMsg(p1.NickName + msgEntrada);
+        ExibeMsg(p1.playerName + msgEntrada);
     }
 
-    public override void OnPlayerLeftRoom(Player p1)
+    public void OnPlayerLeftRoom(PlayerController p1)
     {
-        ExibeMsg(p1.NickName + msgSaida);
-    }*/
+        ExibeMsg(p1.playerName + msgSaida);
+    }
 }
