@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Oficiais/ChooseLevel.unity
     guid: 1b88a51ee7f607748af73384b4ba9c2f
   - enabled: 1
+    path: Assets/Scenes/Oficiais/ChooseLevelMULTIPLAYER.unity
+    guid: 67bf6b5da4d8e1d42bff4d604cfe0a74
+  - enabled: 1
     path: Assets/Scenes/Oficiais/lvl 1.unity
     guid: aff1d53d6c5a76f4cafeefa12b980189
   - enabled: 1

@@ -1862,8 +1862,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 121411130}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: LoadChooseLevel
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: LoadChooseLevelMULTIPLAYER
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
