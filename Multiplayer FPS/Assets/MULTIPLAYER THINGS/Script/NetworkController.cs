@@ -50,10 +50,10 @@ public class NetworkController : MonoBehaviourPunCallbacks
         startPN.gameObject.SetActive(false);
         msgText.gameObject.SetActive(false);
 
-        tempPlayerName = "Zooombie" + Random.Range(8, 99);
+        tempPlayerName = "Player: " + Random.Range(1, 10);
         playerNameInput.text = tempPlayerName;
 
-        tempRoomName = "Roombie" + Random.Range(8, 99);
+        tempRoomName = "Sala: " + Random.Range(1, 10);
     }
 
     //######## Minhas Funções ##################
@@ -138,7 +138,7 @@ public class NetworkController : MonoBehaviourPunCallbacks
         lobbyPn.gameObject.SetActive(false);
         startPN.gameObject.SetActive(true);
         lobbyNumber.gameObject.SetActive(true);
-        LobbyPreFab.gameObject.SetActive(false);
+        //LobbyPreFab.gameObject.SetActive(false);
         Player1.gameObject.SetActive(true);
         Player2.gameObject.SetActive(true);
         
