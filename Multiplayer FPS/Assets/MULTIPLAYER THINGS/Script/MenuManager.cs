@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Photon.Pun;
 using Photon.Realtime;
 using Photon.Pun.UtilityScripts;
@@ -9,10 +10,11 @@ using Hashtable = ExitGames.Client.Photon.Hashtable;
 
 public class MenuManager : MonoBehaviourPunCallbacks
 {
-    public GameObject canvasShearch;
+    public GameObject canvasSearch;
     public GameObject canvasWaiting;
     public GameObject canvasCountdown;
     public GameObject canvasLoading;
+    public Text LobbyName;
 
     public GameObject player;
     public Transform[] spawnPosition;
@@ -21,7 +23,7 @@ public class MenuManager : MonoBehaviourPunCallbacks
 
     void Start()
     {
-        PanelControler(canvasShearch.name);
+        PanelControler(canvasSearch.name);
 
         PhotonNetwork.SendRate = 25;
         PhotonNetwork.SerializationRate = 15;
@@ -29,10 +31,17 @@ public class MenuManager : MonoBehaviourPunCallbacks
 
     void PanelControler(string activePanel)
     {
-        canvasShearch.SetActive(activePanel.Equals(canvasShearch.name));
+        canvasSearch.SetActive(activePanel.Equals(canvasSearch.name));
         canvasWaiting.SetActive(activePanel.Equals(canvasWaiting.name));
         canvasCountdown.SetActive(activePanel.Equals(canvasCountdown.name));
         canvasLoading.SetActive(activePanel.Equals(canvasLoading.name));
+    }
+    public void LeftRoom()
+    {
+        Debug.Log("DESCONECTADO");
+        PhotonNetwork.LeaveRoom();
+        PhotonNetwork.LeaveLobby();
+        PhotonNetwork.Disconnect();
     }
 
     public void ButtonShearch()
@@ -54,7 +63,9 @@ public class MenuManager : MonoBehaviourPunCallbacks
         roomOptions.IsVisible = true;
         roomOptions.MaxPlayers = 2;
 
-        string roomName = "Sala-" + Random.Range(100, 10000);
+        string roomName = "Sala: " + Random.Range(1, 10);
+        LobbyName.text = roomName;
+        LobbyName.gameObject.SetActive(true);
 
         PhotonNetwork.CreateRoom(roomName, roomOptions, TypedLobby.Default);
     }
