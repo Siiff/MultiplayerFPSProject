@@ -5,16 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Oficiais/Main Menu.unity
     guid: 87b16a3609844c34e87df61c429d98e5
   - enabled: 0
     path: Assets/Scenes/Oficiais/ChooseLevel.unity
     guid: 1b88a51ee7f607748af73384b4ba9c2f
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Oficiais/ChooseLevelMULTIPLAYER.unity
     guid: 67bf6b5da4d8e1d42bff4d604cfe0a74
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Oficiais/ChooseCharacter.unity
     guid: 02cba61e49715624c8aac15147f7e20d
   - enabled: 1
@@ -32,7 +32,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Oficiais/lvl 4.unity
     guid: 1220f55f0a449e9418c9713462b2a1c4
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Oficiais/Victory.unity
     guid: 836a1bfe4ff15784e844719e21eb76fc
   m_configObjects: {}
